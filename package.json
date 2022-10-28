@@ -1,0 +1,14 @@
+{
+	"name": "denonodetemplate",
+	"author": "tsorak",
+	"version": "1.0.0",
+	"description": "...",
+	"main": "nodeServer.js",
+	"scripts": {
+		"start": "node nodeServer.js"
+	},
+	"dependencies": {
+		"express": "^4.18.1",
+		"path": "^0.12.7"
+	}
+}
