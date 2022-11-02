@@ -4,9 +4,12 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="./css/allevents_styles.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
         <script src="script.js"></script>
-        <title>Resturanter - Alla event</title>
+        <script src="./js/nav.js" defer></script>
+        <script src="./js/detailsCloser.js" defer></script>
+        <title>Eventer - Alla event</title>
     </head>
     <body>
         <header>
@@ -14,13 +17,38 @@
         </header>
 
         <div class="content">
+            <div class="navToggle">
+                <button>⁝</button>
+            </div>
             <nav>
                 <a href="./">Hem</a>
                 <a href="./allevents.html">Alla event</a>
                 <a href="./createevent.html">Skapa event</a>
                 <a href="./about.html">Om oss</a>
             </nav>
-            <main></main>
+            <main>
+                <script>
+                    for (let i = 0; i < 10; i++) {
+                        document.querySelector("main").innerHTML += `
+                            <div class="event-card">
+                                <a href="./events/eventView.html">
+                                    <img src="https://images.unsplash.com/photo-1581182604346-9dc48e3b5558?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" alt="Event picture" />
+                                </a>
+                                <div>
+                                    <p>Namn</p>
+                                    <p>Datum</p>
+                                    <p>Kategori</p>
+                                    <details>
+                                        <summary>Beskrivning</summary>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, cupiditate.</p>
+                                    </details>
+                                    <a href="./events/eventView.html">Läs mer</a>
+                                </div>
+                            </div>
+                        `;
+                    }
+                </script>
+            </main>
         </div>
     </body>
 </html>

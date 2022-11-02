@@ -4,9 +4,12 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./css/createevent_styles.css" />
         <script src="script.js"></script>
-        <title>Resturanter - Skapa event</title>
+        <script src="./js/nav.js" defer></script>
+        <script src="./js/submitHandler.js" defer></script>
+        <title>Eventer - Skapa event</title>
     </head>
     <body>
         <header>
@@ -14,13 +17,50 @@
         </header>
 
         <div class="content">
+            <div class="navToggle">
+                <button>⁝</button>
+            </div>
             <nav>
                 <a href="./">Hem</a>
                 <a href="./allevents.html">Alla event</a>
                 <a href="./createevent.html">Skapa event</a>
                 <a href="./about.html">Om oss</a>
             </nav>
-            <main></main>
+            <main>
+                <form>
+                    <div>
+                        <label for="event_name">Namn</label>
+                        <input type="text" name="event_name" required />
+                    </div>
+                    <div>
+                        <label for="event_date">Datum</label>
+                        <input type="date" name="event_date" required />
+                    </div>
+                    <div>
+                        <label for="event_desc">Kort beskrivning</label>
+                        <textarea name="event_desc" cols="30" rows="3" required></textarea>
+                    </div>
+                    <div>
+                        <label for="event_agenda">Agenda</label>
+                        <textarea name="event_agenda" cols="30" rows="6" required></textarea>
+                    </div>
+
+                    <div>
+                        <label for="event_images">Bilder</label>
+                        <input type="file" name="event_images" multiple />
+                    </div>
+
+                    <div>
+                        <label for="event_category">Kategori</label>
+                        <select name="event_category" required>
+                            <option value="music">Musik</option>
+                            <option value="educational">Utbildning</option>
+                            <option value="games">Spel</option>
+                        </select>
+                    </div>
+                    <button type="submit">Skapa eventet</button>
+                </form>
+            </main>
         </div>
     </body>
 </html>

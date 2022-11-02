@@ -1,0 +1,25 @@
+main
+    display: grid
+
+    gap: 1rem
+
+    grid-template-columns: repeat(3, 1fr)
+
+    & > img
+        grid-column: span 3
+        height: 16rem
+        margin-inline: auto
+
+// @media only screen and (max-width: 768px)
+//     main
+//         grid-template-columns: repeat(2, 1fr)
+
+//         & > img
+//             grid-column: span 2
+
+// @media only screen and (max-width: 425px)
+//     main
+//         grid-template-columns: repeat(1, 1fr)
+
+//         & > img
+//             grid-column: span 1
