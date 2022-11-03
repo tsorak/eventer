@@ -55,7 +55,6 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.25rem;
-  overflow: scroll;
   min-width: 8rem;
 }
 
@@ -86,14 +85,13 @@ nav a:active {
   display: -ms-flexbox;
   display: flex;
   border: 1px solid #ddd;
-  overflow: scroll;
   max-height: 80vh;
 }
 
 main {
   width: 60ch;
   padding: 0.5rem;
-  overflow: scroll;
+  overflow-y: auto;
   border-left: 1px solid #ddd;
 }
 
@@ -119,7 +117,7 @@ main {
 .event-card > div {
   padding-inline: 0.5rem;
   height: 0;
-  overflow: scroll;
+  overflow-y: auto;
   -webkit-transition: all 0.3s cubic-bezier(0.75, 0, 0.25, 1);
   transition: all 0.3s cubic-bezier(0.75, 0, 0.25, 1);
 }
