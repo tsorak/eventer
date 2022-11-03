@@ -1,7 +1,7 @@
 const btn = document.querySelector(".navToggle").querySelector("button");
 const nav = document.querySelector("nav");
 
-let navState = localStorage.getItem("navState") || "open";
+let navState = localStorage.getItem("navState") || "closed";
 
 btn.addEventListener("click", () => {
     navState = navState === "open" ? "closed" : "open";
