@@ -37,7 +37,6 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  overflow: scroll;
   min-width: 8rem;
 }
 nav a {
@@ -61,14 +60,13 @@ nav a:active {
   background: #fff;
   display: flex;
   border: 1px solid #ddd;
-  overflow: scroll;
   max-height: 80vh;
 }
 
 main {
   width: 60ch;
   padding: 0.5rem;
-  overflow: scroll;
+  overflow-y: auto;
   border-left: 1px solid #ddd;
 }
 
@@ -89,7 +87,7 @@ main {
   height: 6.75rem;
   width: 100%;
   top: 13.5rem;
-  overflow: scroll;
+  overflow-y: auto;
   background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.5333333333));
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
@@ -170,6 +168,7 @@ main {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     flex: none;
+    overflow: hidden;
   }
 }
 @media only screen and (max-width: 425px) {

@@ -1,13 +1,18 @@
+main {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+}
 main > h1 {
   margin-bottom: 1rem;
 }
 main > div {
+  margin: auto 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
 main > div img {
-  margin-top: 8rem;
   width: 100%;
   transition: transform 0.2s;
 }

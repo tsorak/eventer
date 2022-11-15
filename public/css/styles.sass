@@ -6,6 +6,7 @@ $card-height: 13.5rem
     margin: 0
     padding: 0
     box-sizing: border-box
+    // overflow: hidden
 
 .hidden
     display: none !important
@@ -47,7 +48,7 @@ nav
     gap: 0.25rem
     // padding: 0.75rem
 
-    overflow: scroll
+    // overflow: scroll
 
     min-width: 8rem
 
@@ -73,7 +74,7 @@ nav
     display: flex
     border: 1px solid #ddd
 
-    overflow: scroll
+    // overflow: scroll
 
     max-height: 80vh
 
@@ -83,7 +84,8 @@ main
 
     padding: 0.5rem
 
-    overflow: scroll
+    // overflow: scroll
+    overflow-y: auto
 
     border-left: 1px solid #ddd
 
@@ -108,7 +110,7 @@ main
         height: $card-height/2
         width: 100%
         top: $card-height
-        overflow: scroll
+        overflow-y: auto
 
         background: linear-gradient(#fff6, #fff8)
 
@@ -199,6 +201,8 @@ main
         border-top: 1px solid #ddd
         border-bottom: 1px solid #ddd
         flex: none
+
+        overflow: hidden
         // flex: 1 1  !important
         // height: 0
         // transform: scale(0)
