@@ -1,8 +1,5 @@
 main {
-  display: -ms-grid;
   display: grid;
   gap: 1rem;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-}
-/*# sourceMappingURL=allevents_styles.css.map */
+  grid-template-columns: repeat(3, 1fr);
+}/*# sourceMappingURL=allevents_styles.css.map */

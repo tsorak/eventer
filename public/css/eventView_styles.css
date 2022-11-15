@@ -1,26 +1,16 @@
 main > h1 {
   margin-bottom: 1rem;
 }
-
 main > div {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
-
 main > div img {
   margin-top: 8rem;
   width: 100%;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
 }
-
 main > div img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-/*# sourceMappingURL=eventView_styles.css.map */
+  transform: scale(1.1);
+}/*# sourceMappingURL=eventView_styles.css.map */

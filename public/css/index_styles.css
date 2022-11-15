@@ -1,14 +1,10 @@
 main {
-  display: -ms-grid;
   display: grid;
   gap: 1rem;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
-
 main > img {
   grid-column: span 3;
   height: 16rem;
   margin-inline: auto;
-}
-/*# sourceMappingURL=index_styles.css.map */
+}/*# sourceMappingURL=index_styles.css.map */

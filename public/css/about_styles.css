@@ -2,16 +2,13 @@ form {
   background: #ddd;
   padding: 1rem;
   margin-inline: auto;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  gap: .5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
 }
-
 form button {
   grid-column: span 2;
   min-width: none;
@@ -19,34 +16,20 @@ form button {
 
 .shadow {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100vw;
   height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
-  background: #0006;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .popup {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   width: 20rem;
   height: 10rem;
   background: #fff;
-}
-/*# sourceMappingURL=about_styles.css.map */
+}/*# sourceMappingURL=about_styles.css.map */
