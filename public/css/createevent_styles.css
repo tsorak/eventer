@@ -5,4 +5,5 @@ main form {
 }
 main form div {
   display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=createevent_styles.css.map */

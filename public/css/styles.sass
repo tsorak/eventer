@@ -46,9 +46,6 @@ nav
     display: flex
     flex-direction: column
     gap: 0.25rem
-    // padding: 0.75rem
-
-    // overflow: scroll
 
     min-width: 8rem
 
@@ -63,7 +60,6 @@ nav
             color: initial
         &:hover
             color: #006eff
-            // transform: translate(4px)
             padding-left: 1rem
         &:active
             background: #0001
@@ -74,29 +70,35 @@ nav
     display: flex
     border: 1px solid #ddd
 
-    // overflow: scroll
-
     max-height: 80vh
 
 main
-    width: 60ch
-    // height: 100%
+    width: auto
+    max-width: 1000px
 
     padding: 0.5rem
 
-    // overflow: scroll
     overflow-y: auto
 
     border-left: 1px solid #ddd
+
+    .cardContainer
+        display: grid
+
+        gap: 1rem
+
+        grid-template-columns: repeat(3, 1fr)
 
 .event-card
     display: flex
     flex-direction: column
     padding: 0
+    margin: 0 auto
     border: 1px solid #ccc
     border-radius: 0.33rem
 
-    height: $card-height
+    height: fit-content
+    width: fit-content
 
     position: relative
 
@@ -107,9 +109,9 @@ main
     & > div
         position: absolute
         padding-inline: 0.5rem
-        height: $card-height/2
+        height: 50%
         width: 100%
-        top: $card-height
+        top: 100%
         overflow-y: auto
 
         background: linear-gradient(#fff6, #fff8)
@@ -119,9 +121,6 @@ main
         transition: all 0.3s cubic-bezier(.75,0,.25,1)
 
     & > a:first-child
-        flex: 1 0 0
-        min-height: 0
-        height: 50px
         border-radius: 0.33rem 0.33rem 0 0
         overflow: hidden
 
@@ -129,15 +128,14 @@ main
         justify-content: center
 
         & > img
-            // width: 100%
-            // height: calc($card-height - $card-height/2)
-            height: $card-height
+            width: 100%
+            height: 100%
 
     &:hover
         transform: scale(1.05)
         & > div
             // height: 50%
-            top: $card-height/2
+            top: 50%
 
     details
         // margin-top: 1rem
@@ -180,16 +178,17 @@ main
     main
         border-left: none
         // border-top: 1px solid #ddd
-        width: 90%
+        width: 100%
 
-        margin-inline: auto
-
-        grid-template-columns: repeat(2, 1fr)
+        // margin-inline: auto
 
         & > img
-            width: 100%
-            height: 100%
-            grid-column: span 2
+            // width: auto
+            // height: 100%
+            // // grid-column: span 2
+
+        .cardContainer
+            grid-template-columns: repeat(2, auto)
 
     .content
         flex-direction: column
@@ -209,7 +208,8 @@ main
 
 @media only screen and (max-width: 425px)
     main
-        grid-template-columns: repeat(1, 1fr)
-
         & > img
-            grid-column: span 1
+            // grid-column: span 1
+
+        .cardContainer
+            grid-template-columns: repeat(1, 1fr)

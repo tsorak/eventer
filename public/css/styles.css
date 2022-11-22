@@ -64,19 +64,31 @@ nav a:active {
 }
 
 main {
-  width: 60ch;
+  width: auto;
+  max-width: 1000px;
   padding: 0.5rem;
   overflow-y: auto;
   border-left: 1px solid #ddd;
+}
+main .cardContainer {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .event-card {
   display: flex;
   flex-direction: column;
   padding: 0;
+  margin: 0 auto;
   border: 1px solid #ccc;
   border-radius: 0.33rem;
-  height: 13.5rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   position: relative;
   transition: transform 0.3s;
   overflow: hidden;
@@ -84,9 +96,9 @@ main {
 .event-card > div {
   position: absolute;
   padding-inline: 0.5rem;
-  height: 6.75rem;
+  height: 50%;
   width: 100%;
-  top: 13.5rem;
+  top: 100%;
   overflow-y: auto;
   background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.5333333333));
   -webkit-backdrop-filter: blur(4px);
@@ -94,22 +106,20 @@ main {
   transition: all 0.3s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .event-card > a:first-child {
-  flex: 1 0 0;
-  min-height: 0;
-  height: 50px;
   border-radius: 0.33rem 0.33rem 0 0;
   overflow: hidden;
   display: flex;
   justify-content: center;
 }
 .event-card > a:first-child > img {
-  height: 13.5rem;
+  width: 100%;
+  height: 100%;
 }
 .event-card:hover {
   transform: scale(1.05);
 }
 .event-card:hover > div {
-  top: 6.75rem;
+  top: 50%;
 }
 .event-card details summary {
   -webkit-user-select: none;
@@ -150,14 +160,10 @@ main {
   }
   main {
     border-left: none;
-    width: 90%;
-    margin-inline: auto;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  main > img {
     width: 100%;
-    height: 100%;
-    grid-column: span 2;
+  }
+  main .cardContainer {
+    grid-template-columns: repeat(2, auto);
   }
   .content {
     flex-direction: column;
@@ -172,10 +178,7 @@ main {
   }
 }
 @media only screen and (max-width: 425px) {
-  main {
+  main .cardContainer {
     grid-template-columns: repeat(1, 1fr);
-  }
-  main > img {
-    grid-column: span 1;
   }
 }/*# sourceMappingURL=styles.css.map */
