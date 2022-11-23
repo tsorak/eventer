@@ -1,14 +1,16 @@
 document.querySelector("form").addEventListener("submit", (e) => {
-    e.preventDefault();
+	e.preventDefault();
 
-    const payload = {};
+	const payload = {};
 
-    document.querySelectorAll("input, textarea, select").forEach((elem) => {
-        console.log(elem.name);
-        payload[elem.name] = elem.value;
-    });
+	document.querySelectorAll("input, textarea, select").forEach((elem) => {
+		console.log(elem.name);
+		payload[elem.name] = elem.value;
+	});
 
-    console.log(payload);
+	console.log(payload);
 
-    showModal(document.querySelector(".modal"));
+	document.querySelector("form").remove();
+
+	showModal(document.querySelector(".modal"));
 });
