@@ -1,66 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./css/styles.css" />
-        <link rel="stylesheet" href="./css/createevent_styles.css" />
-        <script src="script.js"></script>
-        <script src="./js/nav.js" defer></script>
-        <script src="./js/submitHandler.js" defer></script>
-        <title>Eventer - Skapa event</title>
-    </head>
-    <body>
-        <header>
-            <h1>Skapa event</h1>
-        </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="stylesheet" href="./css/createevent_styles.css" />
+		<script src="script.js"></script>
+		<script src="./js/nav.js" defer></script>
+		<script src="./js/submitHandler.js" defer></script>
+		<title>Eventer - Skapa event</title>
+	</head>
+	<body>
+		<header>
+			<h1>Skapa event</h1>
+		</header>
 
-        <div class="content">
-            <div class="navToggle">
-                <button>⁝</button>
-            </div>
-            <nav>
-                <a href="./">Hem</a>
-                <a href="./allevents.html">Alla event</a>
-                <a href="./createevent.html">Skapa event</a>
-                <a href="./about.html">Om oss</a>
-            </nav>
-            <main>
-                <form>
-                    <div>
-                        <label for="event_name">Namn</label>
-                        <input type="text" name="event_name" required />
-                    </div>
-                    <div>
-                        <label for="event_date">Datum</label>
-                        <input type="date" name="event_date" required />
-                    </div>
-                    <div>
-                        <label for="event_desc">Kort beskrivning</label>
-                        <textarea name="event_desc" cols="30" rows="3" required></textarea>
-                    </div>
-                    <div>
-                        <label for="event_agenda">Agenda</label>
-                        <textarea name="event_agenda" cols="30" rows="6" required></textarea>
-                    </div>
+		<div class="content">
+			<div class="navToggle">
+				<button>⁝</button>
+			</div>
+			<nav>
+				<a href="./">Hem</a>
+				<a href="./allevents.html">Alla event</a>
+				<a href="./createevent.html">Skapa event</a>
+				<a href="./about.html">Om oss</a>
+			</nav>
+			<main>
+				<form>
+					<div>
+						<label for="event_name">Namn</label>
+						<input type="text" name="event_name" required autocomplete="off" />
+					</div>
+					<div>
+						<label for="event_date">Datum</label>
+						<input type="date" name="event_date" required autocomplete="off" />
+					</div>
+					<div>
+						<label for="event_desc">Kort beskrivning</label>
+						<textarea name="event_desc" cols="30" rows="3" required autocomplete="off"></textarea>
+					</div>
+					<div>
+						<label for="event_agenda">Agenda</label>
+						<textarea name="event_agenda" cols="30" rows="6" required autocomplete="off"></textarea>
+					</div>
 
-                    <div>
-                        <label for="event_images">Bilder</label>
-                        <input type="file" name="event_images" multiple />
-                    </div>
+					<div>
+						<label for="event_images">Bilder</label>
+						<input type="file" name="event_images" multiple autocomplete="off" />
+					</div>
 
-                    <div>
-                        <label for="event_category">Kategori</label>
-                        <select name="event_category" required>
-                            <option value="music">Musik</option>
-                            <option value="educational">Utbildning</option>
-                            <option value="games">Spel</option>
-                        </select>
-                    </div>
-                    <button type="submit">Skapa eventet</button>
-                </form>
-            </main>
-        </div>
-    </body>
+					<div>
+						<label for="event_category">Kategori</label>
+						<select name="event_category" required>
+							<option value="group1">Grupp 1</option>
+							<option value="group2">Grupp 2</option>
+							<option value="group3">Grupp 3</option>
+							<option value="group4">Grupp 4</option>
+							<option value="groupB">Grupp B</option>
+							<option value="groupA">Grupp A</option>
+							<option value="WRC">WRC</option>
+						</select>
+					</div>
+					<button type="submit">Skapa eventet</button>
+				</form>
+			</main>
+		</div>
+	</body>
 </html>
