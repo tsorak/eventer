@@ -3,6 +3,12 @@ main {
   flex-direction: column;
   height: 60vh;
 }
+main details {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 main > h1 {
   margin-bottom: 1rem;
 }
@@ -17,5 +23,5 @@ main > div img {
   transition: transform 0.2s;
 }
 main > div img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }/*# sourceMappingURL=eventView_styles.css.map */
